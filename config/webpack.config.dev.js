@@ -209,16 +209,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss$/,
-        use: [
+        test: /\.s[ac]ss$/,
+        include: paths.appSrc,
+        loaders: [
           require.resolve('style-loader'),
-          {
-            loader: require.resolve('sass-loader'),
-            options: {
-              importLoaders: 1,
-            },
-          },
-        ],
+          require.resolve('css-loader'),
+          require.resolve('sass-loader')
+        ]
       },
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.
