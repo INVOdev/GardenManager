@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 
 
 
-import App from './js/App';
+import Gardian from './js/Gardian';
 import registerServiceWorker from './registerServiceWorker';
 import './scss/index.css';
 
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Gardian />, document.getElementById('root'));
 registerServiceWorker();

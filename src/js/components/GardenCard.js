@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-// import './App.css';
-import fire from '../fire';
+import { Card } from 'antd';
 
+import '../../scss/gardenCard.scss';
 
-class App extends Component {
+class GardenCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,48 +11,23 @@ class App extends Component {
     };
   }
 
-  componentWillMount(){
-      let query = fire.database().ref("data/garden").orderByKey();
-      let This = this;
-      query.once("value")
-        .then(function(snapshot) {
-          // console.log(snapshot.val());
-          let data = [];
-          snapshot.forEach(function(childSnapshot) {
-            console.log('key: ' + childSnapshot.key);
-            // childData will be the actual contents of the child
-            console.log(childSnapshot.val());
-            // data[childSnapshot.key].val = childSnapshot.val();
-            // data[childSnapshot.key].name = childSnapshot.nazwa;
-            data.push({
-              key: childSnapshot.key,
-              name: childSnapshot.val().nazwa,
-              map: childSnapshot.val().map,
-              plants: childSnapshot.val().plants
-            });
-          });
-          This.setState({data: data});
-        });
-  }
-
-
   render(){
-    let stateData = this.state.data;
-    const data = stateData.map((x, i) => {
-      return (
-        <div key={i} className="garden-plant">
-          <h3> {x.key} </h3>
-        </div>
-      )
-    });
+    let content = this.props.content;
 
     return(
-      <div className='Garden'>
-        {data}
-      </div>
+      <Card style={{ width: 240 }} bodyStyle={{ padding: 0 }}>
+        <div className="custom-image gardenCard">
+          <img alt="example" width="100%" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+        </div>
+        <div className="custom-card">
+          <h3>{content.key}</h3>
+          <p> {content.name} </p>
+          <div> {content.map} </div>
+          <div> {content.plants} </div>
+        </div>
+      </Card>
     );
   }
-
 }
 
-export default App;
+export default GardenCard;
