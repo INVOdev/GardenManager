@@ -38,7 +38,6 @@ class GardenList extends Component {
         });
   }
 
-
   render(){
     let stateData = this.state.data;
     const data = stateData.map((x, i) =>
@@ -46,7 +45,7 @@ class GardenList extends Component {
     );
 
     return(
-      <Row>
+      <Row type="flex">
         {data}
       </Row>
     );
