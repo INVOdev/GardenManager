@@ -16,8 +16,8 @@ class GardenCard extends Component {
   render(){
     let content = this.props.content;
     return(
-      <Col span={6} xs={24}>
-        <div className="gardenCard">
+      <Col xs={24} sm={24} md={12} lg={6} xl={6}>
+        <div className="plant-card">
           <Card title={content.key} style={{ width: 300 }} bodyStyle={{ padding: 0 }}>
             <div className="custom-image">
               <img alt="example" width="100%" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />

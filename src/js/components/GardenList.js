@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import fire from '../fire';
 
 import GardenCard from './GardenCard';
+import {Row} from 'antd';
 import '../../scss/gardenList.scss';
 
 class GardenList extends Component {
@@ -45,9 +46,9 @@ class GardenList extends Component {
     );
 
     return(
-      <div className='gardenList'>
+      <Row>
         {data}
-      </div>
+      </Row>
     );
   }
 

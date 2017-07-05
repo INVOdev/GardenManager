@@ -1,10 +1,6 @@
-.gardenCard{
-  // background-color: green;
-  // display: block;
-  // margin: 15px;
-  .ant-card{
-    margin: 15px auto;
-  }
+.plant-card{
+  display: flex;
+  justify-content: center;
 }
 .custom-image img {
   display: block;
