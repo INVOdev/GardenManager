@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import '../../scss/loginForm.scss';
+import fire from '../fire';
 
+import '../../scss/loginForm.scss';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import 'antd/lib/form/style/css';
 import 'antd/lib/icon/style/css';
@@ -8,7 +9,6 @@ import 'antd/lib/input/style/css';
 import 'antd/lib/button/style/css';
 import 'antd/lib/checkbox/style/css';
 const FormItem = Form.Item;
-
 
 class LoginForm extends Component {
   constructor(props) {
@@ -23,6 +23,16 @@ class LoginForm extends Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
+        fire.auth().signInWithEmailAndPassword(values.userName, values.password)
+        .then(function(firebaseUser) {
+            console.log('logged in');
+        })
+        .catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log(errorCode + " " + errorMessage);
+        });
       }
     });
   }
