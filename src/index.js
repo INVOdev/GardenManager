@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-
-// import Gardian from './js/Gardian';
-
-import LoginPage from './js/containers/LoginPage';
 import registerServiceWorker from './registerServiceWorker';
 import './scss/index.css';
 
+import Routing from './router';
 
-
-ReactDOM.render(<LoginPage />, document.getElementById('root'));
+ReactDOM.render(<Routing />, document.getElementById('root'));
 registerServiceWorker();
