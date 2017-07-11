@@ -1,0 +1,19 @@
+.login-form-box {
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+  max-width: 350px;
+  margin: auto;
+  background-color: rgba(255,255,255,.9);
+  border-radius: 5px;
+  padding: 25px;
+  h2 {
+    margin-bottom: 15px;
+  }
+  .login-form-forgot {
+    float: right;
+  }
+  .login-form-button {
+    width: 100%;
+  }
+}

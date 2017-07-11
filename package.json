@@ -80,9 +80,7 @@
       "^react-native$": "react-native-web"
     }
   },
-  "babel": {
-    
-  },
+  "babel": {},
   "eslintConfig": {
     "extends": "react-app"
   }

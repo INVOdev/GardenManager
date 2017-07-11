@@ -1,0 +1,23 @@
+{
+  "data" : {
+    "garden" : {
+      "ogrodek_andrej" : {
+        "create_date" : "24.06.2017",
+        "map" : "{map_obj}",
+        "nazwa" : "Mój ogórdek",
+        "plants" : "[plant_array]"
+      },
+      "ogrodek_krzysiek" : {
+        "create_date" : "24.03.2017",
+        "map" : "krzysiuasd",
+        "nazwa" : "Mój ogórdek",
+        "plants" : "roslina"
+      }
+    }
+  },
+  "users" : {
+    "gadmin" : {
+      "password" : "admin#"
+    }
+  }
+}
