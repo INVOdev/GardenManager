@@ -13,7 +13,6 @@ class Routing extends Component {
         <div>
           <Route exact strict path="/" component={Gardian} />
           <Route exact path="/loginPage" component={LoginPage} />
-          <Route exact component={LoginPage} />
         </div>
       </Router>
     );
